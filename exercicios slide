@@ -1,0 +1,46 @@
+Exercicios slides PONTEIROS
+
+Exercicio 1 
+
+package main
+
+import "fmt"
+
+func swap(ptr, ptr1 *int) {
+	x := *ptr
+	*ptr = *ptr1
+	*ptr1 = x
+
+}
+
+func main() {
+	x := 10
+	y := 15
+	fmt.Println("Valor de x e y:", x, y)
+	swap(&x, &y)
+	fmt.Println("Novo valo de x e y:", x, y)
+
+}
+
+
+Exercicio 2
+
+package main
+
+import "fmt"
+
+func swap(ptr *bool) {
+	*ptr = true
+}
+
+func main() {
+	x := false
+	fmt.Println("Valor de x:", x)
+	swap(&x)
+	fmt.Println("Novo valor de x:", x)
+
+}
+
+
+
+
